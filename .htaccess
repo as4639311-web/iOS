@@ -1,0 +1,12 @@
+# يفرض أولوية index.php (تطبيقنا الفعلي) على أي index.html قد يبقى من
+# محاولة سابقة في نفس المجلد.
+DirectoryIndex index.php index.html
+
+# يمنع عرض محتوى المجلدات مباشرة (مثل db/) لأي زائر يكتب رابطها بلا اسم ملف
+Options -Indexes
+
+# يمنع الوصول المباشر لمجلد db/ (ملفات SQL للاستيراد فقط، لا حاجة تصفّحها كموقع)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^db/ - [F,L]
+</IfModule>
