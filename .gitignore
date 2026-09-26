@@ -1,0 +1,12 @@
+# أسرار الاتصال — لا تُرفع إلى Git أبداً (انسخ config.sample.php إلى config.php على الخادم)
+config.php
+# صور الآليات المرفوعة (بيانات تشغيلية، ليست كوداً)
+uploads/*
+!uploads/.htaccess
+!uploads/assets/
+uploads/assets/*
+!uploads/assets/index.html
+# ملفات النظام
+.DS_Store
+Thumbs.db
+*.log
